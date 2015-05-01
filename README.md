@@ -37,4 +37,4 @@ I UNDERSTAND ROUTING NOW!!!
 
 Heroku:
 -------
-This has been deployed to Heroku, and can be accessed through the following link:
+This has been deployed to Heroku, and can be accessed through the following link: https://enigmatic-meadow-5301.herokuapp.com/
