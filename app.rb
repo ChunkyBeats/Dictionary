@@ -27,5 +27,14 @@ end
 
 get('/words/:id/definitions/new') do
   @words = Word.find(params.fetch('id').to_i())
-  erb(:word)
+  erb(:definition_form)
+end
+
+post('/definitions') do
+  definition = params.fetch('new_def')
+  @definition = Definition.new({:define => definition})
+  @definition.save()
+  @word = Word.find(params.fetch('word_id').to_i())
+  @word.add_definition(@definition)
+  erb(:success_def)
 end
